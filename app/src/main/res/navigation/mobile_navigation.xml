@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/services">
+
+    <fragment
+        android:id="@+id/services"
+        android:name="com.ahmed.dogyapp.ui.Services.ServicesFragment"
+        android:label="Services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/rating"
+        android:name="com.ahmed.dogyapp.ui.rating.RatingshowFragment"
+        android:label="Rating"
+        tools:layout="@layout/fragment_rating" />
+
+
+    <fragment
+        android:id="@+id/work"
+        android:name="com.ahmed.dogyapp.ui.myworks.MyWorkFragment"
+        android:label="My work"
+        tools:layout="@layout/fragment_mywork" />
+
+
+    <fragment
+        android:id="@+id/wishlist"
+        android:name="com.ahmed.dogyapp.ui.rating.RatingshowFragment"
+        android:label="Wishlist"
+        tools:layout="@layout/fragment_rating" />
+
+
+</navigation>

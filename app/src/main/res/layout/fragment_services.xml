@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.Services.ServicesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/ser"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Services"
+            android:textColor="@color/txt_clr" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/tim"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Time"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:id="@+id/add"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Address"
+            android:textColor="@color/txt_clr" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:id="@+id/fin"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Finish"
+            android:textColor="@color/txt_clr" />
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="110dp"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="108dp">
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="87.5dp"
+            android:background="@drawable/back2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="84.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/back1" />
+
+
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="45dp">
+
+                <View
+                    android:layout_width="90dp"
+                    android:background="@drawable/back_purple_700_rad_50in"
+                    android:layout_height="45dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/back_button"
+                    android:gravity="center"
+                    android:text="Back"
+                    android:textAllCaps="true"
+                    android:textColor="@color/txt_clr"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16sp"
+                android:background="@drawable/back_purple_700_rad_50in"
+                android:gravity="center"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Choose a services"
+            android:textColor="#616161"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

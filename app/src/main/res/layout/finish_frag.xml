@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/finish_page"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/lay"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/back_purple_rad20dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/back_white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="64dp"
+                    android:text="Unknown User"
+                    android:textColor="@color/txt_clr"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="1, Street 1001, El Ouardia \n Tunis, Tunisie" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Services"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+
+                        android:background="@drawable/border"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_white" />
+
+                        <ImageView
+                            android:id="@+id/cat1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/cat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cat1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Training"
+                            android:textColor="@color/txt_clr"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/border">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_white" />
+
+                        <ImageView
+                            android:id="@+id/hotel2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/pet_hotel" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hotel2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Pet Hotel"
+                            android:textColor="@color/txt_clr"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/border">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/border_white" />
+
+                        <ImageView
+                            android:id="@+id/hotel1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/veterinary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hotel1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="Veterinary"
+                            android:textColor="@color/txt_clr"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Date"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16sp"
+                    android:gravity="center"
+                    android:text="October 23 - October 31 \n07:00 - 18:00"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="308dp"
+            android:background="@drawable/back_purple_700_rad_50in"
+            app:layout_constraintBottom_toBottomOf="@id/lay"
+            app:layout_constraintEnd_toEndOf="@id/lay"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@id/lay" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            app:layout_constraintTop_toTopOf="@id/v"
+            app:layout_constraintStart_toStartOf="@id/v"
+            app:layout_constraintEnd_toEndOf="@id/v"
+            tools:src="@drawable/user_example"
+            app:layout_constraintBottom_toBottomOf="@id/v"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

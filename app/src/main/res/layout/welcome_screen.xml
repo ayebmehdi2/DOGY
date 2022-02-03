@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dd.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3.2"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="-5dp"
+                app:sl_dx="0dp"
+                app:sl_dy="0dp"
+                app:sl_cornerRadius="100dp"
+                app:sl_shadowRadius="4dp"
+                app:sl_shadowColor="#AA555555">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/gradient_color2"
+                    />
+
+            </com.dd.ShadowLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.4"
+                />
+
+            <com.dd.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sl_dx="0dp"
+                app:sl_dy="0dp"
+                android:layout_margin="16sp"
+                app:sl_cornerRadius="100dp"
+                android:layout_gravity="center"
+                app:sl_shadowRadius="4dp"
+                app:sl_shadowColor="#AA000000">
+
+                <Button
+                    android:drawableRight="@drawable/right"
+                    android:background="@drawable/back_button"
+                    android:layout_width="wrap_content"
+                    android:paddingEnd="16sp"
+                    android:paddingStart="16sp"
+                    android:id="@+id/starte"
+                    android:textColor="#444444"
+                    android:text="GET STARTED"
+                    android:layout_height="wrap_content"/>
+
+            </com.dd.ShadowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo"/>
+
+                <TextView
+                    android:textSize="32sp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOGY"/>
+
+                <TextView
+                    android:layout_marginTop="64dp"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

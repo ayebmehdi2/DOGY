@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/back"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:text="Sign Up"
+                android:textColor="@color/purple_500"/>
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/image"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/user"
+                android:layout_width="130dp"
+                android:scaleType="centerCrop"
+                android:layout_height="130dp"
+                android:padding="16sp"
+                android:src="@drawable/ic_profile"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toEndOf="@+id/user"
+                app:layout_constraintTop_toTopOf="@+id/user"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="16sp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:text="Veification"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:gravity="center"
+                android:text="Check your email to verify your identity, then click the button bellow !"
+                android:layout_width="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16sp"
+                android:hint="Email"
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:layout_marginTop="64dp"
+                android:background="@drawable/back_purple_700_rad_50in"
+                android:layout_width="match_parent"
+                android:id="@+id/continu"
+                android:textColor="#FFF"
+                android:text="Check"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginBottom="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:text="Already have an acount?"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/purple_500"
+                    android:layout_marginBottom="16sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/signinn"
+                    android:layout_width="wrap_content"
+                    android:text=" Sign in"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</layout>
