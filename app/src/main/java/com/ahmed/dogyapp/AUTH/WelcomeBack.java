@@ -9,10 +9,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
 
 import com.ahmed.dogyapp.HomeActivity;
-import com.ahmed.dogyapp.ProfilData;
+import com.ahmed.dogyapp.USER.ProfilData;
 import com.ahmed.dogyapp.R;
 import com.ahmed.dogyapp.databinding.WelcomeBackBinding;
 import com.bumptech.glide.Glide;
@@ -25,12 +26,12 @@ import com.google.firebase.database.ValueEventListener;
 public class WelcomeBack extends AppCompatActivity {
 
     WelcomeBackBinding binding;
-
     FirebaseDatabase database;
     DatabaseReference reference;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.welcome_back);
 

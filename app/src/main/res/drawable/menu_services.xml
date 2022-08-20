@@ -5,8 +5,8 @@
         android:startColor="@color/purple_700"
         android:endColor="@color/purple_500"/>
 
-    <corners android:bottomLeftRadius="100dp"
-        android:bottomRightRadius="100dp"/>
+    <corners android:bottomLeftRadius="50in"
+        android:bottomRightRadius="50in"/>
 
 
 </shape>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".HomeActivity">
+
+        <Spinner
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/govs"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/governorates"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/hn"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="No Supllier here :)"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</layout>

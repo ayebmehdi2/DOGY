@@ -3,8 +3,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
-        android:background="#F5F5F5"
+        android:background="@color/background"
         android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -16,7 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="7">
+            android:layout_weight="7.5">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,6 +77,9 @@
                         android:textColor="#616161"/>
 
                     <EditText
+                        android:paddingStart="16sp"
+                        android:paddingEnd="16sp"
+                        android:background="@drawable/back_gray_rad20"
                         android:layout_marginStart="16sp"
                         android:layout_marginEnd="16sp"
                         android:id="@+id/addrs"
@@ -87,11 +89,14 @@
                         android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:hint="Email"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="45dp"/>
 
                     <EditText
                         android:layout_marginStart="16sp"
                         android:textSize="14sp"
+                        android:paddingStart="16sp"
+                        android:paddingEnd="16sp"
+                        android:background="@drawable/back_gray_rad20"
                         android:layout_marginEnd="16sp"
                         android:id="@+id/passw"
                         android:inputType="textPassword"
@@ -99,7 +104,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_width="match_parent"
                         android:hint="Password"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="45dp"/>
 
 
 
@@ -119,6 +124,7 @@
                         android:layout_marginBottom="32sp"
                         android:layout_marginTop="16dp"
                         android:id="@+id/frgt"
+                        android:foreground="?android:attr/selectableItemBackground"
                         android:layout_height="wrap_content"
                         android:textColor="@color/txt_clr"
                         android:textSize="12sp"
@@ -158,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign in with Facebook"/>
 
+
             <Button
                 android:paddingStart="16sp"
                 android:drawableStart="@drawable/google"
@@ -190,6 +197,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/purple_500"
                     android:layout_marginBottom="16sp"
                     android:gravity="center_horizontal"

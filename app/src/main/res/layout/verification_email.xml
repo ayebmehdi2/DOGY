@@ -5,6 +5,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:background="@color/white"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -16,6 +17,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:src="@drawable/back"
                 android:padding="8dp"
                 android:layout_width="wrap_content"
@@ -56,15 +58,9 @@
                 android:scaleType="centerCrop"
                 android:layout_height="130dp"
                 android:padding="16sp"
-                android:src="@drawable/ic_profile"
+                android:src="@drawable/ic_profile_icone"
                 />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_add"
-                app:layout_constraintEnd_toEndOf="@+id/user"
-                app:layout_constraintTop_toTopOf="@+id/user"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -103,6 +99,7 @@
                 android:background="@drawable/back_purple_700_rad_50in"
                 android:layout_width="match_parent"
                 android:id="@+id/continu"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:textColor="#FFF"
                 android:text="Check"
                 android:layout_height="wrap_content"/>
@@ -131,6 +128,7 @@
                     android:layout_marginBottom="16sp"
                     android:gravity="center_horizontal"
                     android:id="@+id/signinn"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="wrap_content"
                     android:text=" Sign in"
                     android:layout_height="wrap_content"/>

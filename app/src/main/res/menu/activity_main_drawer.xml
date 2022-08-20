@@ -8,21 +8,20 @@
 
         <item
             android:id="@+id/services"
-            android:icon="@drawable/ic_services"
+            android:icon="@drawable/ic_servicess"
             android:title="Services" />
+
+
+        <item
+            android:id="@+id/visite"
+            android:icon="@drawable/ic_visite_profile"
+            android:title="Visite Profile" />
+
+
         <item
             android:id="@+id/rating"
             android:icon="@drawable/ic_round_star_border_24"
             android:title="Rating" />
-
-        <item
-            android:id="@+id/work"
-            android:icon="@drawable/ic_work"
-            android:title="My Work" />
-        <item
-            android:id="@+id/wishlist"
-            android:icon="@drawable/ic_love"
-            android:title="Wishlist" />
 
         <item android:title= "About Us"
             android:id="@+id/about"/>

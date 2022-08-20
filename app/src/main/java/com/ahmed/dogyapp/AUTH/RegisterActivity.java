@@ -9,19 +9,18 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
 
-import com.ahmed.dogyapp.ProfilData;
 import com.ahmed.dogyapp.R;
+import com.ahmed.dogyapp.USER.ProfilData;
 import com.ahmed.dogyapp.databinding.SignupBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -31,24 +30,25 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.UUID;
 
-
 public class RegisterActivity extends AppCompatActivity {
-
 
     private String username, email, password;
     private FirebaseAuth auth;
     private ProgressDialog PD;
     private DatabaseReference reference;
-    private String pathImage = "";
+    private String pathImage = null;
+    private String img = "https://firebasestorage.googleapis.com/v0/b/dogy-3c9e4.appspot.com/o/ic_profile_icone.png?alt=media&token=b619493c-210d-4abe-8db1-909688296a94";
     FirebaseStorage storage;
     StorageReference storageReference;
     SignupBinding binding;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = DataBindingUtil.setContentView(this, R.layout.signup);
-
 
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
@@ -56,12 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         reference = database.getReference();
 
-        binding.back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        binding.back.setOnClickListener(view -> finish());
 
 
         binding.image.setOnClickListener(view -> {
@@ -79,13 +74,10 @@ public class RegisterActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
 
-
         binding.signup.setOnClickListener(view -> {
             email = binding.email.getText().toString();
             password = binding.password.getText().toString();
             username = binding.username.getText().toString();
-
-
 
 
             try {
@@ -103,12 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
 
-                if (!(pathImage.length() > 0 )){
-                    Toast.makeText(RegisterActivity.this, "Image not found", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-
 
                 PD.show();
                 auth.createUserWithEmailAndPassword(email, password)
@@ -117,14 +103,29 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (!task.isSuccessful()) {
                                         Toast.makeText(
                                                 RegisterActivity.this,
-                                                "Authentication Failed Check the email or password",
+                                                "You have already account with this email ! ",
                                                 Toast.LENGTH_LONG).show();
                                         PD.dismiss();
 
                                     } else {
 
+                                        if (pathImage==null){
 
-                                        uploadImage(pathImage);
+                                            SharedPreferences.Editor preference = PreferenceManager.getDefaultSharedPreferences(RegisterActivity.this).edit();
+                                            preference.putString("uid", auth.getUid());
+                                            preference.putString("name", username);
+                                            preference.apply();
+                                            reference.child("PROFILES/"+auth.getUid()).setValue(new ProfilData(auth.getUid(),
+                                                    username, email, password, img, ""));
+                                            //FirebaseMessaging.getInstance().subscribeToTopic("user_"+auth.getUid());
+                                            PD.dismiss();
+                                            Intent intent = new Intent(RegisterActivity.this, CheckEmailActivity.class);
+                                            startActivity(intent);
+                                        }else {
+                                            uploadImage(pathImage);
+                                        }
+
+
 
                                     }
 
@@ -134,8 +135,6 @@ public class RegisterActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         });
-
-
 
     }
 
@@ -165,10 +164,11 @@ public class RegisterActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         if (bitmap == null){
-            Toast.makeText(RegisterActivity.this, "Failed Try again", Toast.LENGTH_SHORT).show();
             return;
         }
+
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 20, baos);
         byte[] data = baos.toByteArray();
@@ -177,34 +177,32 @@ public class RegisterActivity extends AppCompatActivity {
         UploadTask uploadTask = ref.putBytes(data);
         uploadTask.addOnFailureListener(exception -> {
 
-            Toast.makeText(RegisterActivity.this, "Failed "+exception.getMessage(), Toast.LENGTH_SHORT).show();
-            SharedPreferences.Editor preference = PreferenceManager.getDefaultSharedPreferences(RegisterActivity.this).edit();
+            SharedPreferences.Editor preference = PreferenceManager.getDefaultSharedPreferences(
+                    RegisterActivity.this).edit();
             preference.putString("uid", auth.getUid());
             preference.putString("name", username);
             preference.apply();
-            reference.child("PROFILES/"+auth.getUid()).setValue(new ProfilData(auth.getUid(), username, email, password, null));
-            FirebaseMessaging.getInstance().subscribeToTopic("user_"+auth.getUid());
-
+            reference.child("PROFILES/"+auth.getUid()).setValue(new ProfilData(auth.getUid(),
+                    username, email, password, img, ""));
+            //FirebaseMessaging.getInstance().subscribeToTopic("user_"+auth.getUid());
             PD.dismiss();
 
             Intent intent = new Intent(RegisterActivity.this, CheckEmailActivity.class);
-            intent.putExtra("image", "null");
             startActivity(intent);
 
         }).addOnSuccessListener(taskSnapshot -> ref.getDownloadUrl().addOnSuccessListener(uri -> {
             String url = uri.toString();
-            SharedPreferences.Editor preference = PreferenceManager.getDefaultSharedPreferences(RegisterActivity.this).edit();
+            SharedPreferences.Editor preference = PreferenceManager.getDefaultSharedPreferences(
+                    RegisterActivity.this).edit();
             preference.putString("uid", auth.getUid());
             preference.putString("name", username);
             preference.putString("img", pathImage);
             preference.apply();
-            reference.child("PROFILES/"+auth.getUid()).setValue(new ProfilData(auth.getUid(), username, email, password, url));
-            FirebaseMessaging.getInstance().subscribeToTopic("user_"+auth.getUid());
-
+            reference.child("PROFILES/"+auth.getUid()).setValue(new ProfilData(auth.getUid(),
+                    username, email, password, url, ""));
+            //FirebaseMessaging.getInstance().subscribeToTopic("user_"+auth.getUid());
             PD.dismiss();
-
             Intent intent = new Intent(RegisterActivity.this, CheckEmailActivity.class);
-            intent.putExtra("image", url);
             startActivity(intent);
         }));
 

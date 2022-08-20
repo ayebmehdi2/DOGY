@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.myworks.MyWorkFragment">
-
-    <LinearLayout
-        app:layout_constraintTop_toTopOf="parent"
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <View
-            android:background="@drawable/menu_services"
+        <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:layout_weight="8"
-            android:layout_height="0dp"/>
-        <View
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:background="@drawable/menu_services"
+                android:layout_width="match_parent"
+                android:layout_weight="9"
+                android:layout_height="0dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="0dp"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_checkmark" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:src="@drawable/ic_menu"/>
+            <TextView
+                android:layout_marginTop="16sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="48sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Well Done."
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
-        android:gravity="center"
-        android:orientation="vertical">
+            <TextView
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your order has been placed"
+                android:textColor="@color/white"
+                />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_checkmark" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="16sp"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="48sp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Well Done."
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="25sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your order has been placed"
-            android:textColor="@color/white"
-            />
-
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

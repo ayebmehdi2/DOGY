@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.ahmed.dogyapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,7 @@ public class ForgetAndChangePasswordActivity extends AppCompatActivity {
 
     @Override    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.forgot_pass);
 
         PD = new ProgressDialog(this);

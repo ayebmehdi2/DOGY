@@ -4,8 +4,8 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background"
         xmlns:app="http://schemas.android.com/apk/res-auto">
-
 
         <LinearLayout
             android:orientation="vertical"
@@ -15,7 +15,7 @@
             <com.dd.ShadowLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="3.2"
+                android:layout_weight="5.2"
                 android:layout_marginEnd="-5dp"
                 android:layout_marginStart="-5dp"
                 android:layout_marginTop="-5dp"
@@ -23,7 +23,7 @@
                 app:sl_dy="0dp"
                 app:sl_cornerRadius="100dp"
                 app:sl_shadowRadius="4dp"
-                app:sl_shadowColor="#AA555555">
+                app:sl_shadowColor="#AA000000">
 
                 <View
                     android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3.4"
+                android:layout_weight="6.8"
                 />
 
             <com.dd.ShadowLayout
@@ -97,7 +97,7 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3">
+                android:layout_weight="4">
 
                 <ImageView
                     android:layout_width="150dp"
@@ -115,8 +115,8 @@
                 <TextView
                     android:layout_marginTop="64dp"
                     android:textSize="25dp"
-                    android:textStyle="bold"
                     android:textColor="#FFF"
+                    android:textAllCaps="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Welcome"/>

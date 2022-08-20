@@ -47,5 +47,60 @@
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="next">Next</string>
+
+    <string name="date_format">MMMM dd</string>
+    <string name="address">Address</string>
+
+
+    <string name="facebook_app_id">311122767704291</string>
+    <string name="fb_login_protocol_scheme">fb311122767704291</string>
+    <string name="facebook_client_token">2b030954c8cde2dc0027a8f5b348c705</string>
+
+
+    <string-array name="governorates">
+
+        <item>Choose a governorate</item>
+
+        <item>Tunis</item>
+        <item>Ariana</item>
+        <item>Ben Arous</item>
+        <item>Mannouba</item>
+
+        <item>Bizerte</item>
+        <item>Nabeul</item>
+        <item>Béja</item>
+        <item>Jendouba</item>
+        <item>Zaghouan</item>
+        <item>Siliana</item>
+        <item>Le Kef</item>
+        <item>Sousse</item>
+        <item>Monastir</item>
+        <item>Mahdia</item>
+
+        <item>Kasserine</item>
+        <item>Sidi Bouzid</item>
+        <item>Kairouan</item>
+        <item>Gafsa</item>
+        <item>Sfax</item>
+        <item>Gabès</item>
+        <item>Médenine</item>
+        <item>Tozeur</item>
+        <item>Kebili</item>
+        <item>Ttataouine</item>
+
+    </string-array>
+
+
+    <string-array name="specialty">
+
+        <item>Choose a Specialty</item>
+        <item>Training</item>
+        <item>Pet Hotel</item>
+        <item>Veterinary</item>
+
+    </string-array>
+
+
 
 </resources>

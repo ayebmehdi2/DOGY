@@ -2,9 +2,11 @@
 <layout>
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/services_page"
+        android:background="@color/background"
         android:orientation="vertical">
 
         <View
@@ -22,20 +24,35 @@
                 android:layout_weight="1"
                 android:layout_height="1dp"/>
             <RelativeLayout
+                android:id="@+id/tran"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="160dp"
                 android:gravity="center"
-                android:background="@drawable/border"
                 android:layout_height="160dp">
 
                 <View
                     android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/training_v"
                     android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/border_white" />
+                    android:background="@drawable/border" />
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="#9E9E9E"
+                    app:sl_shadowRadius="4dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_white" />
+
+
+                </com.dd.ShadowLayout>
 
                 <ImageView
                     android:id="@+id/cat"
@@ -52,7 +69,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="8dp"
                     android:text="Training"
-                    android:textColor="@color/txt_clr"
+                    android:textColor="@color/ser_color"
                     android:textStyle="bold" />
 
 
@@ -63,16 +80,34 @@
                 android:layout_weight="1"
                 android:layout_height="1dp"/>
             <RelativeLayout
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/hot"
                 android:layout_width="160dp"
-                android:background="@drawable/border"
                 android:layout_height="160dp">
-
                 <View
+                    android:id="@+id/hotel_v"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:background="@drawable/border_white"/>
+                    android:background="@drawable/border" />
 
+                <com.dd.ShadowLayout
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="#9E9E9E"
+                    app:sl_shadowRadius="4dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_white" />
+
+
+                </com.dd.ShadowLayout>
                 <ImageView
                     android:id="@+id/hotel"
                     android:layout_width="80dp"
@@ -84,10 +119,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/hotel"
-                    android:textColor="@color/txt_clr"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="8dp"
                     android:text="Pet Hotel"
+                    android:textColor="@color/ser_color"
                     android:textStyle="bold" />
 
 
@@ -104,17 +139,34 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/vet"
             android:layout_marginTop="16sp"
             android:layout_width="160dp"
             android:layout_gravity="center"
-            android:background="@drawable/border"
             android:layout_height="160dp">
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="4dp"
-                android:background="@drawable/border_white"/>
+                android:id="@+id/veterinay_v"
+                android:visibility="gone"
+                android:background="@drawable/border" />
+
+            <com.dd.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:sl_cornerRadius="10dp"
+                app:sl_dx="0dp"
+                app:sl_dy="0dp"
+                app:sl_shadowColor="#9E9E9E"
+                app:sl_shadowRadius="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_white" />
+            </com.dd.ShadowLayout>
 
             <ImageView
                 android:id="@+id/veterinary"
@@ -127,11 +179,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/veterinary"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/ser_color"
                 android:layout_marginTop="8dp"
-                android:textStyle="bold"
-                android:text="Veterinary"/>
+                android:text="Veterinary"
+                android:textStyle="bold" />
 
 
 

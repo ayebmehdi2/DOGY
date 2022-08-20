@@ -6,13 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.databinding.DataBindingUtil;
-
-import com.ahmed.dogyapp.ProfilData;
+import com.ahmed.dogyapp.USER.ProfilData;
 import com.ahmed.dogyapp.R;
 import com.ahmed.dogyapp.databinding.VerificationEmailBinding;
 import com.bumptech.glide.Glide;
@@ -35,6 +34,7 @@ public class CheckEmailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         binding = DataBindingUtil.setContentView(this, R.layout.verification_email);
 
         PD = new ProgressDialog(this);
@@ -86,5 +86,18 @@ public class CheckEmailActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        binding.continu.setOnClickListener(view -> {
+            user.reload();
+            boolean emailVerified = user.isEmailVerified();
+            if (emailVerified){
+                startActivity(new Intent(CheckEmailActivity.this, WelcomeBack.class));
+            }else {
+                Toast.makeText(this, "Email not verified ! ", Toast.LENGTH_SHORT).show();
+            }
 
+        });
+    }
 }

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adress_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#F0F0F0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="16sp"
+        android:background="@drawable/back_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address" />
+
+        <EditText
+            android:id="@+id/adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:text="State" />
+
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16sp"
+                    android:text="Country" />
+
+                <EditText
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    tools:text="Tunisia" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:text="Cancel"
+                android:layout_margin="3dp"
+                android:id="@+id/cancel"
+                android:textColor="@color/txt_clr"
+                android:background="@drawable/back_white"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_tab" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:text="Save"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/back_tab"
+            android:id="@+id/save"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</layout>

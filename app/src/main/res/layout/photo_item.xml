@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_marginStart="16sp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/i"
+        tools:src="@drawable/ic_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="110dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Mehdi Ayeis wife Mehdi Ayeisisdi Ayeis wife verv.. verv..."
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:lines="1"
+        android:id="@+id/desc"
+        android:textColor="@color/txt_clr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/i"/>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

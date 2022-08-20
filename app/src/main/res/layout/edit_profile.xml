@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:paddingBottom="32sp"
+        android:paddingTop="32dp"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:id="@+id/i"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/user"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginStart="32sp"
+            android:layout_width="96dp"
+            android:scaleType="centerCrop"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_profile_icone"
+            />
+
+        <ImageButton
+            android:id="@+id/set_img"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back_gray"
+            android:src="@drawable/ic_baseline_check_24"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/i"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/e_username"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Username"
+                android:textSize="16dp"
+                android:textColor="@color/txt_clr"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/right"
+                android:layout_width="45dp"
+                android:padding="8dp"
+                android:layout_height="45dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background"/>
+
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/e_email"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Email"
+                android:textSize="16dp"
+                android:textColor="@color/txt_clr"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/right"
+                android:layout_width="45dp"
+                android:padding="8dp"
+                android:layout_height="45dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background"/>
+
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/e_pass"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:textSize="16dp"
+                android:textColor="@color/txt_clr"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/right"
+                android:layout_width="45dp"
+                android:padding="8dp"
+                android:layout_height="45dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background"/>
+
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/e_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Phone Number"
+                android:textSize="16dp"
+                android:textColor="@color/txt_clr"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/right"
+                android:layout_width="45dp"
+                android:padding="8dp"
+                android:layout_height="45dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background"/>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

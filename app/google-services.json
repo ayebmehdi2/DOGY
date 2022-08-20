@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "682310651365",
-    "project_id": "dogy-3c9e4",
-    "storage_bucket": "dogy-3c9e4.appspot.com"
+    "project_number": "113631404027",
+    "project_id": "dogy-app-93121",
+    "storage_bucket": "dogy-app-93121.appspot.com"
   },
   "client": [
-    
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682310651365:android:8843d64a6c61bc071df30c",
+        "mobilesdk_app_id": "1:113631404027:android:b4713fb13f89a9e19bf55e",
         "android_client_info": {
           "package_name": "com.ahmed.dogyapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "682310651365-itudqkukodg2cghm85043ev6jmnpbm0r.apps.googleusercontent.com",
+          "client_id": "113631404027-hn3fblver33mhu07l2uvslhulf6tm7rj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ahmed.dogyapp",
-            "certificate_hash": "7ed6e89747e33956b4b5cc77a8b7324ce6dfa07f"
+            "certificate_hash": "a4b80bdecdcaa2f516e93faca05f72d4ab833418"
           }
         },
         {
-          "client_id": "682310651365-f4593b0b89smg4mc3avnqenn9t7sv2fh.apps.googleusercontent.com",
+          "client_id": "113631404027-dgngq56gpakul9n8dpibscm4p33ghtq5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC0L5s3T0P1BB8KKOy6a3YjqaGO086J73s"
+          "current_key": "AIzaSyBpzw8XrbVZqfa21_zWl7WAJtS9PqVN0zo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "682310651365-f4593b0b89smg4mc3avnqenn9t7sv2fh.apps.googleusercontent.com",
+              "client_id": "113631404027-dgngq56gpakul9n8dpibscm4p33ghtq5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:background="@color/background"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/time_page">
 
         <TextView
@@ -23,7 +25,7 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -50,25 +52,33 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
-
-
-                <ImageView
-                    android:layout_width="24sp"
-                    android:layout_height="24sp"
-                    android:src="@drawable/ic_baseline_calendar_month_24" />
-
-
             </LinearLayout>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="Select Date"
+                android:id="@+id/select_date"
+                android:paddingStart="16dp"
+                android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+                android:textColor="@color/white"
+                android:background="@drawable/back_tab"
+                android:layout_height="wrap_content"/>
 
-            <CalendarView
+            <ru.slybeaver.slycalendarview.SlyCalendarView
+                android:id="@+id/slyCalendarView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp" />
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/date"
+                android:textColor="@color/txt_clr"
+                android:layout_marginTop="16dp"
+                tools:text="October 23 - December 14"/>
 
         </LinearLayout>
 
@@ -85,31 +95,105 @@
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-        <Spinner
-            android:id="@+id/start"
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/back_white"
-            android:entries="@array/time"
-            android:padding="8dp"
-            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/end"
+            <Spinner
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:background="@drawable/back_white"
+                android:layout_height="wrap_content"
+                android:outlineSpotShadowColor="@color/purple_500"
+                android:entries="@array/time"
+                android:padding="8dp"
+                android:textAlignment="center"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_round_arrow_drop_up_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_round_arrow_drop_down_24"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    tools:layout_editor_absoluteY="8dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/back_white"
-            android:entries="@array/time"
-            android:padding="8dp"
             app:layout_constraintEnd_toEndOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:orientation="horizontal">
 
+            <Spinner
+                android:id="@+id/end"
+                android:layout_width="wrap_content"
+                android:background="@drawable/back_white"
+                android:layout_height="wrap_content"
+                android:outlineSpotShadowColor="@color/purple_500"
+                android:entries="@array/time"
+                android:padding="8dp"
+                android:textAlignment="center"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_round_arrow_drop_up_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_round_arrow_drop_down_24"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_alignParentBottom="true"
+                    tools:layout_editor_absoluteY="8dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

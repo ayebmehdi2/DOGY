@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_height="75dp">
+
+    <TextView
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:paddingStart="16sp"
+        android:textStyle="bold"
+        android:id="@+id/dat"
+        tools:text="14/12/2002 09:00"
+        android:textColor="#212121"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:backgroundTint="#9E9E9E"/>
+
+</LinearLayout>
